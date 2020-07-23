@@ -71,39 +71,21 @@ public class Airport {
     }
 
     public Airport sortByMaxDistance() {
-        planes.sort(new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.Get_Max_Flight_Distance() - o2.Get_Max_Flight_Distance();
-            }
-        });
+        planes.sort((Comparator<Plane>) (o1, o2) -> o1.Get_Max_Flight_Distance() - o2.Get_Max_Flight_Distance());
         return this;
     }
 
     public Airport sortByMaxSpeed() {
-        planes.sort(new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMS() - o2.getMS();
-            }
-        });
+        planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMS() - o2.getMS());
         return this;
     }
 
     public void sortByMaxLoadCapacity() {
-        planes.sort(new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMinLoadCapacity() - o2.getMinLoadCapacity();
-            }
-        });
+        planes.sort((Comparator<Plane>) (o1, o2) -> o1.getMinLoadCapacity() - o2.getMinLoadCapacity());
     }
 
     public List<? extends Plane> getPlanes() {
         return planes;
-    }
-
-    private void print(Collection<? extends Plane> collection) {
-        for (Plane plane : collection) {
-            System.out.println(plane);
-        }
     }
 
     @Override
