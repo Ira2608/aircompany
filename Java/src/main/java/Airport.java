@@ -27,11 +27,11 @@ public class Airport {
         for (Plane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } //if
+            }
             else {
 
-            } // else
-        } //for
+            }
+        }
         return militaryPlanes;
     }
 
@@ -43,11 +43,6 @@ public class Airport {
                 planeWithMaxCapacity = passengerPlanes.get(i);
             }
         }
-
-
-
-
-
 
         return planeWithMaxCapacity;
     }
@@ -138,7 +133,6 @@ public class Airport {
                 '}';
     }
 
-    //Constructor
     public Airport(List<? extends Plane> planes) {
         this.planes = planes;
     }
